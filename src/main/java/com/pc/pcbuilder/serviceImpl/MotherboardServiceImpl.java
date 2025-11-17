@@ -4,6 +4,8 @@ import com.pc.pcbuilder.exception.ResourceNotFoundException;
 import com.pc.pcbuilder.model.Motherboard;
 import com.pc.pcbuilder.repo.MotherboardRepo;
 import com.pc.pcbuilder.service.MotherboardService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
