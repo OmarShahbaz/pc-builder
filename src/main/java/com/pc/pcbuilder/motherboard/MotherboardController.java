@@ -1,7 +1,7 @@
-package com.pc.pcbuilder.controller;
+package com.pc.pcbuilder.motherboard;
 
-import com.pc.pcbuilder.model.Motherboard;
-import com.pc.pcbuilder.service.MotherboardService;
+import com.pc.pcbuilder.request.MotherboardRequest;
+import com.pc.pcbuilder.response.MotherboardResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController()
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/motherboard")
+@RequestMapping("v1/motherboard")
 public class MotherboardController {
 
     private final MotherboardService motherboardService;
@@ -24,8 +24,8 @@ public class MotherboardController {
     }
 
     @PostMapping("/add")
-    public Motherboard insertMotherboard(@RequestBody Motherboard newMotherboard){
-        return motherboardService.addMotherboard(newMotherboard);
+    public MotherboardResponse insertMotherboard(@RequestBody MotherboardRequest motherboardRequest){
+        return motherboardService.addMotherboard(motherboardRequest);
     }
 
     @PutMapping("/update/{id}")
