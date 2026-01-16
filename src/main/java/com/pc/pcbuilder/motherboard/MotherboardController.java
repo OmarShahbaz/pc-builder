@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController()
+@RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("v1/motherboard")
+@RequestMapping("/v1/motherboard")
 public class MotherboardController {
 
     private final MotherboardService motherboardService;
