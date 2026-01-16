@@ -1,6 +1,7 @@
 package com.pc.pcbuilder.motherboard;
 
 import com.pc.pcbuilder.constants.*;
+import com.pc.pcbuilder.motherboard.constants.*;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

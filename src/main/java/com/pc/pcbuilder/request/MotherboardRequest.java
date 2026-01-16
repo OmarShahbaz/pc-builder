@@ -2,6 +2,7 @@ package com.pc.pcbuilder.request;
 
 import com.pc.pcbuilder.constants.*;
 
+import com.pc.pcbuilder.motherboard.constants.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Builder;

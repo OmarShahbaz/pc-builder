@@ -2,6 +2,7 @@ package com.pc.pcbuilder.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.pc.pcbuilder.constants.*;
+import com.pc.pcbuilder.motherboard.constants.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

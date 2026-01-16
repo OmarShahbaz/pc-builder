@@ -1,4 +1,4 @@
-package com.pc.pcbuilder.constants;
+package com.pc.pcbuilder.motherboard.constants;
 
 public enum MemoryType {
 
