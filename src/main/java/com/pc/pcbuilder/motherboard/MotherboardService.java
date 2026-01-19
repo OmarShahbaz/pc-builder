@@ -7,6 +7,8 @@ import com.pc.pcbuilder.response.MotherboardResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 @Service
@@ -22,8 +24,21 @@ public class MotherboardService {
         this.mapper = mapper;
     }
 
-    public List<Motherboard> fetchAllMotherboards() {
-        return (List<Motherboard>) motherboardRepo.findAll();
+    public List<MotherboardResponse> getAllMotherboards() {
+
+        List<Motherboard> motherboards = new ArrayList<>();
+
+        Iterable<Motherboard> motherboardIterable = motherboardRepo.findAll();
+        Iterator<Motherboard> iterator = motherboardIterable.iterator();
+        while (iterator.hasNext()){
+            motherboards.add(iterator.next());
+        }
+
+        List<MotherboardResponse> motherboardResponses = motherboards.stream()
+                .map(m -> mapper.toResponse(m))
+                .toList();
+
+        return motherboardResponses;
 
     }
 

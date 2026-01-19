@@ -2,6 +2,7 @@ package com.pc.pcbuilder.motherboard;
 
 import com.pc.pcbuilder.request.MotherboardRequest;
 import com.pc.pcbuilder.response.MotherboardResponse;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,13 +20,14 @@ public class MotherboardController {
     }
 
     @GetMapping(value = "/all")
-    public List<Motherboard> getAllMotherboards(){
-        return motherboardService.fetchAllMotherboards();
+    public ResponseEntity<List<MotherboardResponse>> getAllMotherboards(){
+        return ResponseEntity.ok(motherboardService.getAllMotherboards());
     }
 
     @PostMapping("/add")
-    public MotherboardResponse insertMotherboard(@RequestBody MotherboardRequest motherboardRequest){
-        return motherboardService.addMotherboard(motherboardRequest);
+    public ResponseEntity<MotherboardResponse> addMotherboard(@Valid @RequestBody MotherboardRequest motherboardRequest){
+        MotherboardResponse motherboardResponse = motherboardService.addMotherboard(motherboardRequest);
+        return ResponseEntity.ok(motherboardResponse);
     }
 
     @PutMapping("/update/{id}")

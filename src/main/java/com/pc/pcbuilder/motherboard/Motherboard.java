@@ -42,15 +42,19 @@ public class Motherboard {
     @Column(name = "formFactor", nullable = false)
     private FormFactor formFactor;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "memorySlot", nullable = false)
     private MemorySlot memorySlot;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "memoryStandard", nullable = false)
     private MemoryType memoryType;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "socketType", nullable = false)
     private SocketType socketType;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "chipset")
     private Chipset chipset;
 
