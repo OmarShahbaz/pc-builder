@@ -1,7 +1,10 @@
 package com.pc.pcbuilder.motherboard;
 
 
+import com.pc.pcbuilder.constants.ProductCategory;
 import com.pc.pcbuilder.mapper.MotherboardMapper;
+import com.pc.pcbuilder.motherboard.constants.MemorySlot;
+import com.pc.pcbuilder.motherboard.constants.SocketType;
 import com.pc.pcbuilder.request.MotherboardRequest;
 import com.pc.pcbuilder.response.MotherboardResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +47,7 @@ public class MotherboardService {
 
     public MotherboardResponse addMotherboard(MotherboardRequest motherboardRequest) {
         Motherboard entity = mapper.toEntity(motherboardRequest);
+        entity.setProductCategory(ProductCategory.MOTHERBOARD);
         Motherboard saved = motherboardRepo.save(entity);
         return mapper.toResponse(saved);
     }

@@ -28,8 +28,8 @@ public class Motherboard {
     @Column(name = "brand", nullable = false)
     private Brand brand;
 
-    @Column(name = "model")
-    private String model;
+    @Column(name = "motherboardName")
+    private String motherboardName;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "category", nullable = false)

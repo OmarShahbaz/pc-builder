@@ -24,14 +24,11 @@ public class MotherboardRequest {
     private Date launchDate;
 
     @NotNull(message = "Brand is required")
-    private Brand brand;
+    private Brand brand;//MSI,ASUS
 
     @NotNull(message = "Name is required")
     @Size(min = 3, max = 100, message = "Name must be between 3 and 100 characters")
-    private String motherboardName;
-
-    @NotNull(message = "productCategory is required")
-    private ProductCategory productCategory;
+    private String motherboardName;//B760M
 
     @NotNull(message = "motherboardSeries is required")
     private String motherboardSeries;
@@ -40,10 +37,10 @@ public class MotherboardRequest {
     private FormFactor formFactor;
 
     @NotNull(message = "memorySlot is required")
-    private MemorySlot memorySlot;
+    private MemorySlot memorySlot;//2,4
 
     @NotNull(message = "memoryType is required")
-    private MemoryType memoryType;
+    private MemoryType memoryType;//DDR4,DDR5,DDR6
 
     @NotNull(message = "socketType is required")
     private SocketType socketType;

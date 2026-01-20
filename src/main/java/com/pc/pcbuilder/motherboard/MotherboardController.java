@@ -15,7 +15,7 @@ public class MotherboardController {
 
     private final MotherboardService motherboardService;
 
-    MotherboardController(MotherboardService motherboardService){
+    public MotherboardController(MotherboardService motherboardService){
         this.motherboardService = motherboardService;
     }
 

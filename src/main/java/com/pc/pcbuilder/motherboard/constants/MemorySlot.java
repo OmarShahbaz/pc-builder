@@ -7,9 +7,9 @@ public enum MemorySlot {
 
     TWO(2), FOUR(4);
 
-    private final int slot;
+    private final int slotValue;
 
     MemorySlot(int slot){
-        this.slot = slot;
+        this.slotValue = slot;
     }
 }

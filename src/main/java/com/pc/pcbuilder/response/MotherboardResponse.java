@@ -19,24 +19,23 @@ public class MotherboardResponse {
     @JsonIgnore
     private Date launchDate;
 
-    private Brand brand;
+    private String brand;
 
-    private String model;
+    private String motherboardName;
 
-    private ProductCategory productCategory;
+    private String productCategory;
 
     private String motherboardSeries;
 
-    private FormFactor formFactor;
+    private String formFactor;
 
     @JsonIgnore
-    private MemorySlot memorySlot;
+    private String memorySlot;
 
     @JsonIgnore
-    private MemoryType memoryType;
+    private String memoryType;
 
+    private String socketType;
 
-    private SocketType socketType;
-
-    private Chipset chipset;
+    private String chipset;
 }
