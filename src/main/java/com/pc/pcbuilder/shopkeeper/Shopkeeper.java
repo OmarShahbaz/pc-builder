@@ -21,4 +21,6 @@ public class Shopkeeper {
     private String shopName;
 
     private String location;
+
+    private boolean isActive;
 }

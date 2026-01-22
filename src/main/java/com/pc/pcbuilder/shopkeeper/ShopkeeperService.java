@@ -20,6 +20,7 @@ public class ShopkeeperService {
 
     public ShopkeeperResponse openShop(ShopkeeperRequest shopkeeperRequest) {
         Shopkeeper shopkeeper = shopkeeperMapper.toEntity(shopkeeperRequest);
+        shopkeeper.setActive(false);
         Shopkeeper entity = shopkeeperRepo.save(shopkeeper);
         return shopkeeperMapper.toResponse(entity);
     }
